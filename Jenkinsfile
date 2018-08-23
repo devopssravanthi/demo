@@ -13,9 +13,7 @@ pipeline {
 	           
 	        stage('compile') { 
 	            steps {
-	                  
-	                 
-	                  withMaven(maven : 'Maven-3.5.3') {
+	                   withMaven(maven : 'Maven-3.5.4') {
 	                         echo "${params.version}"
 				 // sh 'mvn compile -Dparams.version="${params.version}"'
 				  //sh 'mvn compile'
