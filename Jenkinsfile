@@ -1,23 +1,15 @@
 pipeline {
 	    agent any 
-	       //tools {
-	              //maven 'Maven-3.5.3'
-	       //}
-	
-	//  parameters {
-       // string(defaultValue: '', description: '', name: 'version')
-		  
-  //  }
+		
 	    stages {
 	       
 	           
 	        stage('compile') { 
 	            steps {
 	                   withMaven(maven : 'Maven-3.5.4') {
-	                         echo "${params.version}"
 				 // sh 'mvn compile -Dparams.version="${params.version}"'
 				  //sh 'mvn compile'
-				  bat 'mvn compile'
+				       bat 'mvn compile'
 				 // bat 'mvn compile -Dparams.version=%params.version%'
 				  
 	                  }
@@ -51,11 +43,5 @@ pipeline {
 	               //bat 'mvn deploy -Dmaven.test.skip=true -Dparams.version=%params.version%' 
 	           // }
 	        //}
-		    
-		    		    
-		    
-		   
-		    
 	    }
 	}
-
