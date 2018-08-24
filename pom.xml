@@ -66,7 +66,7 @@
 	<repository>
      		<id>deploymentRepo</id>	
 		<name>nexusdemo-release</name>
-     		<url>http://192.168.56.111:8081/repository/nexusdemo-release/</url>
+     		<url>http://localhost:8081/repository/demorepo/</url>
     	</repository>
    	<snapshotRepository>
       		<id>deploymentRepo</id>
