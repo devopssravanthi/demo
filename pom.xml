@@ -64,12 +64,12 @@
   </distributionManagement> -->
 <distributionManagement>
 	<repository>
-     		<id>nexusdemo-release</id>	
+     		<id>deploymentRepo</id>	
 		<name>nexusdemo-release</name>
      		<url>http://192.168.56.111:8081/repository/nexusdemo-release/</url>
     	</repository>
    	<snapshotRepository>
-      		<id>nexusdemo-snapshot</id>
+      		<id>deploymentRepo</id>
 		<name>nexusdemo-snapshot</name>
       		<!-- <url>http://192.168.56.111:8081/repository/nexusdemo-snapshot/</url> -->
 	   	<url>http://localhost:8081/repository/demorepo-snap/</url>
