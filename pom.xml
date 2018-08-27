@@ -27,7 +27,7 @@
     <relativePath />
   </parent> 	-->
 
-  <groupId>org.mybatis.jpetstore</groupId>
+  <groupId>maven-org.mybatis</groupId>
   <!--version>${params.version}</version-->
   <version>maven-6.0.3-SNAPSHOT</version>
   <artifactId>maven-jpetstore</artifactId>
