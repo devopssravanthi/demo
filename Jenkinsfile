@@ -15,19 +15,19 @@ pipeline {
 	        stage('Test') { 
 	            steps {
 	              
-			   // bat 'mvn test'
+			   bat 'mvn test'
 			  
 	            }
 	        }
 	        stage('package') { 
 	            steps {
 	            
-			   // bat 'mvn package'
+			   bat 'mvn package'
 	            }
 	        }
 		     stage('sonar') { 
 	            	steps {
-	              // 	 bat 'mvn sonar:sonar -Dmaven.test.skip=true'
+	               bat 'mvn sonar:sonar -Dmaven.test.skip=true'
 			
 	            }
 	        }
