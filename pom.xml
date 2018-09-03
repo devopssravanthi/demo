@@ -82,7 +82,6 @@
      		<id>deploymentRepo</id>	
 		<name>demorepo_release</name>
 		<url>http://admin:admin123@localhost:8081/repository/demorepo_release/</url>
-		http://
     	</repository>
    	<snapshotRepository>
       		<id>deploymentRepo</id>
