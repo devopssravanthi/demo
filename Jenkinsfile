@@ -33,11 +33,11 @@ pipeline {
 	        }
 		    
 		    
-		  //   stage('Deploy') { 
-	           // steps {
+		     stage('Deploy') { 
+	                   steps {
 			
-	               //bat 'mvn deploy -Dmaven.test.skip=true '
-	           // }
-	        //}
+	               bat 'mvn deploy -Dmaven.test.skip=true '
+	                        }
+	                   }
 	    }
 	}
