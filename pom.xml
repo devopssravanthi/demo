@@ -77,7 +77,20 @@
 </distributionManagement>
 -->
 
-
+<distributionManagement>
+	<repository>
+     		<id>deploymentRepo</id>	
+		<name>demorepo_release</name>
+     		http://localhost:8081/repository/demorepo_release/
+    	</repository>
+   	<snapshotRepository>
+      		<id>deploymentRepo</id>
+		<name>demorepo_release</name>
+		<url>http://localhost:8081/repository/demorepo_snap/</url>
+   </snapshotRepository>
+</distributionManagement>
+	
+	
   <dependencies>
     <dependency>
       <groupId>ognl</groupId>
