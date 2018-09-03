@@ -81,7 +81,7 @@
 	<repository>
      		<id>deploymentRepo</id>	
 		<name>demorepo_release</name>
-     		http://localhost:8081/repository/demorepo_release/
+		<url>http://localhost:8081/repository/demorepo_release/</url>
     	</repository>
    	<snapshotRepository>
       		<id>deploymentRepo</id>
