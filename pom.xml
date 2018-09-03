@@ -81,13 +81,13 @@
 	<repository>
      		<id>deploymentRepo</id>	
 		<name>demorepo_release</name>
-		<url>http://admin@admin123:localhost:8081/repository/demorepo_release/</url>
+		<url>http://admin:admin123@localhost:8081/repository/demorepo_release/</url>
 		http://
     	</repository>
    	<snapshotRepository>
       		<id>deploymentRepo</id>
 		<name>demorepo_release</name>
-		<url>http://admin@admin123:localhost:8081/repository/demorepo_snap//</url>
+		<url>http://admin:admin123@localhost:8081/repository/demorepo_snap//</url>
    </snapshotRepository>
 </distributionManagement>
 	
