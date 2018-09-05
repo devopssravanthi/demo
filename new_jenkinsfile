@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage ('Checkout') {
+      steps {
+        checkout scm
+      }
+    }
+    stage('build') {
+      steps {
+        bat 'mvn clean package'
+      }
+    }
+    stage('nexus') {
+      steps {
+        nexusArtifactUploader artifacts: [[artifactId: 'demo', classifier: '', file: 'C:\\Program Files (x86)\\Jenkins\\workspace\\nexus deploy\\target\\jpetstore.war', type: 'war']], credentialsId: 'nexus', groupId: 'org.mybatis', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'demorepo_release', version: '1'
+      }
+    }
+  }
+}
