@@ -7,7 +7,7 @@ pipeline {
 	        stage('compile') { 
 	            steps {
 	                   withMaven(maven : 'Maven-3.5.4') {
-				       bat 'mvn compile'
+				       sh 'mvn compile'
 				 		  
 	                  }
 	            }
@@ -15,19 +15,19 @@ pipeline {
 	        stage('Test') { 
 	            steps {
 	              
-			   bat 'mvn test'
+			   sh 'mvn test'
 			  
 	            }
 	        }
 	        stage('package') { 
 	            steps {
 	            
-			   bat 'mvn package'
+			   sh 'mvn package'
 	            }
 	        }
 		     stage('sonar') { 
 	            	steps {
-	               bat 'mvn sonar:sonar -Dmaven.test.skip=true'
+	               sh 'mvn sonar:sonar -Dmaven.test.skip=true'
 			
 	            }
 	        }
@@ -36,7 +36,7 @@ pipeline {
 		     stage('Deploy') { 
 	                   steps {
 			
-	               bat 'mvn deploy -Dmaven.test.skip=true '
+	               sh 'mvn deploy -Dmaven.test.skip=true '
 	                        }
 	                   }
 	    }
