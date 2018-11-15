@@ -1,9 +1,7 @@
 pipeline {
 	    agent any 
-		
-	    stages {
+    	    stages {
 	       
-	           
 	        stage('compile') { 
 	            steps {
 	                   withMaven(maven : 'Maven-3.5.4') {
@@ -17,12 +15,14 @@ pipeline {
 			   sh 'mvn test'  
 	            }
 	        }
+		}
 	        stage('package') { 
 	            steps {
 	                   withMaven(maven : 'Maven-3.5.4') {
 			   sh 'mvn package'
 	            }
 	        }
+		}
 		     stage('sonar') { 
 	            	steps {
 	               withMaven(maven : 'Maven-3.5.4') {
@@ -30,11 +30,13 @@ pipeline {
 			
 	            }
 	        }
+		}
 		     stage('Deploy') { 
 	                   steps {
 	               withMaven(maven : 'Maven-3.5.4') {
 	               sh 'mvn deploy -Dmaven.test.skip=true '
 	                        }
 	                   }
+		     }
 	    }
 	}
