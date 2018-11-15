@@ -7,16 +7,14 @@ pipeline {
 	        stage('compile') { 
 	            steps {
 	                   withMaven(maven : 'Maven-3.5.4') {
-				       sh 'mvn compile'
-				 		  
+				       sh 'mvn compile'	 		  
 	                  }
 	            }
 	        }
 	        stage('Test') { 
 	            steps {
 	              
-			   sh 'mvn test'
-			  
+			   sh 'mvn test'  
 	            }
 	        }
 	        stage('package') { 
@@ -31,8 +29,6 @@ pipeline {
 			
 	            }
 	        }
-		    
-		    
 		     stage('Deploy') { 
 	                   steps {
 			
