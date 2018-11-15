@@ -80,13 +80,13 @@
 <distributionManagement>
 	<repository>
      		<id>deploymentRepo</id>	
-		<name>demorepo_release</name>
+		<name>demorepo</name>
 		<url>http://admin:admin123@localhost:8081/repository/demorepo_release/</url>
     	</repository>
    	<snapshotRepository>
-      		<id>deploymentRepo</id>
-		<name>demorepo_release</name>
-		<url>http://admin:admin123@localhost:8081/repository/demorepo_snap/</url>
+      		<id>deploymentrepo</id>
+		<name>demorepo1</name>
+		<url>http://admin:admin123@localhost:8081/repository/demorepo1_snap/</url>
    </snapshotRepository>
 </distributionManagement>
 	
@@ -184,6 +184,11 @@
           <target>1.5</target>
         </configuration>
       </plugin>
+	<plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.5.4</version>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
