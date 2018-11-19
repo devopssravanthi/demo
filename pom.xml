@@ -287,6 +287,11 @@
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
+		 <properties>
+                <sonar.host.url>http://192.168.56.101:9000/</sonar.host.url>
+                <sonar.jdbc.username>admin</sonar.jdbc.username>
+                <sonar.jdbc.password>admin</sonar.jdbc.password>
+                </properties>
       <build>
         <pluginManagement>
           <plugins>
