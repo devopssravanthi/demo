@@ -5,28 +5,28 @@ pipeline {
 	        stage('compile') { 
 	            steps {
 	                   withMaven(maven : 'Maven-3.5.4') {
-				       sh 'mvn compile'	 		  
+				       bat 'mvn compile'	 		  
 	                  }
 	            }
 	        }
 	        stage('Test') { 
 	            steps {
 	                   withMaven(maven : 'Maven-3.5.4') {
-			   sh 'mvn test'  
+			   bat 'mvn test'  
 	            }
 	        }
 		}
 	        stage('package') { 
 	            steps {
 	                   withMaven(maven : 'Maven-3.5.4') {
-			   sh 'mvn package'
+			   bat 'mvn package'
 	            }
 	        }
 		}
 		     stage('sonar') { 
 	            	steps {
 	               withMaven(maven : 'Maven-3.5.4') {
-	               sh 'mvn sonar:sonar -Dmaven.test.skip=true'
+	               bat 'mvn sonar:sonar -Dmaven.test.skip=true'
 			
 	            }
 	        }
@@ -34,7 +34,7 @@ pipeline {
 		     stage('Deploy') { 
 	                   steps {
 	               withMaven(maven : 'Maven-3.5.4') {
-	               sh 'mvn deploy -Dmaven.test.skip=true '
+	               bat 'mvn deploy -Dmaven.test.skip=true '
 	                        }
 	                   }
 		     }
